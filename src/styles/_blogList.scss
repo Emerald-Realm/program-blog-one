@@ -1,0 +1,19 @@
+@media screen and (max-width: 799px) {
+    .blog-list {
+        width: 100vw;
+        padding: 1vh 5vw;
+    }
+
+
+
+    .language-name:after{
+        display: block;
+        margin: 0.3em 0em;
+        height: 3px;
+        text-shadow: none;
+        content: '';
+        width: 50vw;
+        background-color: var(--grey);
+    } 
+    
+}

@@ -1,24 +1,94 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from 'react';
+import AboutUs from './components/Aboutpage/AboutUs';
+import BlogList from './components/Blogs/BlogListpage/BlogList';
+import Blog from './components/Blogs/Blogpage/Blog';
+import ContactUs from './components/Contactpage/ContactUs';
+import SignIn from './components/Forms/SignIn';
+import Home from './components/Homepage/Home';
+import Footer from './components/TheFooter/Footer';
+import Header from './components/TheHeader/Header'
+import Navbar from './components/TheHeader/Navbar';
+import './styles/styles.css'
+
+export const GlobalContext = React.createContext()
+
+
+const intialState = {
+  name: 'ade',
+  menuStatus: false
+  
+}
+
+const reducer = (state, action) => {
+  switch (action) {
+    case 'menu_Change':
+      return {
+        ...state,
+        menuStatus : !state.menuStatus
+      }
+
+    default:
+      return state
+  }
+}
+
 
 function App() {
+  const [item, dispatch] = useReducer(reducer, intialState)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContext.Provider
+      value={{ globalState: item, globalDispatch: dispatch }}
+    >
+
+      <div className="App">
+        {/* this is the app document */}
+        <Header />
+        <Navbar />
+        {/* <Home /> */}
+        <Blog />
+        {/* <BlogList /> */}
+        {/* <ContactUs /> */}
+        {/* <AboutUs /> */}
+        {/* <SignIn /> */}
+        <Footer />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/*
+          CONSUMING THE GLOBAL CONTEXT
+        {
+          import {GlobalContext} from 'App'
+          const globalContext = useContext(GlobalContext)
+          <button
+          onClick={() =>
+            globalContext.globalDispatch('increment')}>
+          Increment</button>
+        } */}
+      </div>
+    </GlobalContext.Provider>
   );
 }
 

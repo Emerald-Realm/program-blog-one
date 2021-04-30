@@ -1,0 +1,99 @@
+@media screen and (max-width: 799px) {
+  .home-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-intro {
+    padding: 5vw;
+  }
+
+  .home-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-image: url("../assets/media/images/wallpapers/wallpaper3.jpg");
+    padding: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .showcase-card {
+      display: flex;
+      flex-direction: column;
+      align-items: auto;
+      background-color: hsla(0, 0%, 100%, 0.9);
+      padding: 1rem;
+      margin: 0.5em;
+      border-radius: 0.8rem;
+    }
+
+    .tags {
+      // @include fontStyle($h5, $h5b);
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+
+    .blog-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .blog-writer {
+      display: flex;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .home-language {
+    margin: 0rem 5vw;
+
+    .language-navbar {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .mobile:nth-child(n+4) {
+      display: none;
+    }
+  }
+
+  .home-philosophy {
+    padding: 2vh 5vw;
+    background-color: var(--grey);
+    color: var(--white);
+  }
+
+  .home-popular {
+    overflow: scroll;
+
+    .popular-post-slide {
+      display: flex;
+      padding: 0vw 5vw;
+    }
+  }
+
+  .home-recent {
+    padding: 3vh 5vw;
+    background-color: var(--grey);
+  }
+
+  .home-testimony {
+    padding: 0vh 5vw;
+  }
+
+  .home-email {
+    padding: 2vh 5vw;
+    input {
+      width: 100%;
+      border: 2px solid var(--grey);
+      margin: 0.5em 0vw;
+      padding: 1em;
+    }
+  }
+}

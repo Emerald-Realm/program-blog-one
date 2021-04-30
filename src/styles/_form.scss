@@ -1,0 +1,16 @@
+.sign-in {
+    border: 2px solid var(--black);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    // width: 16rem;
+    width: clamp(12rem, 80vw, 16rem);
+    .sign-in-options {
+
+        .base-button-two {
+            margin: 0.5rem;
+            width: 80%;
+            margin: 0.5rem auto;
+        }
+    }
+}

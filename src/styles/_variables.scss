@@ -1,0 +1,121 @@
+.App {
+  --grey: #a5a5a5;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("");
+}
+
+@mixin fontStyle($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.h1 {
+  @include fontStyle(3rem, 800);
+}
+
+.h2 {
+  @include fontStyle(2.5rem, 400);
+}
+
+.h3 {
+  @include fontStyle(2rem, 500);
+}
+
+.h4 {
+  @include fontStyle(1.5rem, 600);
+}
+
+.h5 {
+  @include fontStyle(0.9rem, 700);
+}
+
+.h6 {
+  @include fontStyle(0.8rem, 300);
+}
+
+.gap1 {
+  gap: 2.5rem;
+}
+
+.gap2 {
+  gap: 1.875rem;
+}
+
+.gap3 {
+  gap: 1.25rem;
+}
+
+.gap4 {
+  gap: 1rem;
+}
+
+.gap5 {
+  gap: 0.625rem;
+}
+
+.gap6 {
+  gap: 0.3125rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex-col-end {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+$pad1: 2.5rem;
+$pad2: 1.875rem;
+$pad3: 1.25rem;
+$pad4: 1rem;
+$pad5: 0.625rem;
+$pad6: 0.3125rem;
+
+$h5: 0.9rem;
+$h5b: bold;
+
+$blank: hsla(0, 0%, 100%, 0.2);
+
+$primary_color: #eb8916;
+$secondary_color: #ecaa5d;
+$link: #731b85;
+$html: #e666ff;
+$css: #50850d;
+$js: #4c3152;
+$header_color: linear-gradient(
+  148.25deg,
+  rgba(230, 102, 255, 0.2) 0.82%,
+  rgba(230, 102, 255, 0.1) 100%
+);
