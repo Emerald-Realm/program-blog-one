@@ -10,7 +10,7 @@ function BaseBlog(props) {
   const { name, bloggerImage, tagOne, tagTwo, tagThree, title, date, mainImage, secImage, partOne, partTwo} = props
 
   return (
-    <div className='base-blog'>
+    <div className='base-blog flex-col-start gap3'>
       <BlogContainer name={name}
       bloggerImage={bloggerImage}
       tagOne = {tagOne}
@@ -22,8 +22,6 @@ function BaseBlog(props) {
       secImage = {secImage}
       blogPartOne = {partOne}
       blogPartTwo = {partTwo}
-
-
       />
       <BlogActions />
       <RelatedBlogs list={relatedList}/>

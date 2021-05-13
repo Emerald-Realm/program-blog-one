@@ -1,6 +1,4 @@
 @media only screen and (min-width: 800px) {
-
-
   .header {
     display: flex;
     position: sticky;
@@ -9,22 +7,19 @@
     justify-content: space-between;
     margin: 0.2rem 0rem;
     padding: 0.2em 5vw;
-    background-color: hsla(0, 0%, 100%, 0.9);
-  }
+    background-color: rgba(255, 255, 255, 0.9); }
 
   .menu-button {
-    display: none;
-  }
+    display: none; }
 
   .hide {
-    background-color: none;
-  }
+    background-color: none; }
 
   .nav-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-  }
-}
+    gap: 2rem; } }
+
+/*# sourceMappingURL=_desktop.css.map */

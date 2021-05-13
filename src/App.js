@@ -7,16 +7,22 @@ import SignIn from './components/Forms/SignIn';
 import Home from './components/Homepage/Home';
 import Footer from './components/TheFooter/Footer';
 import Header from './components/TheHeader/Header'
-import Navbar from './components/TheHeader/Navbar';
+import HtmlPage from './components/Blogs/LanguagePages/html/HtmlPage'
+import CssPage from './components/Blogs/LanguagePages/css/CssPage'
+import JavascriptPage from './components/Blogs/LanguagePages/js/JavascriptPage'
+import ReactPage from './components/Blogs/LanguagePages/react/ReactPage'
+import VuePage from './components/Blogs/LanguagePages/vue/VuePage'
 import './styles/styles.css'
 
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import ScrollToTop from './ScrollToTop'
 export const GlobalContext = React.createContext()
 
 
 const intialState = {
   name: 'ade',
   menuStatus: false
-  
+
 }
 
 const reducer = (state, action) => {
@@ -24,7 +30,7 @@ const reducer = (state, action) => {
     case 'menu_Change':
       return {
         ...state,
-        menuStatus : !state.menuStatus
+        menuStatus: !state.menuStatus
       }
 
     default:
@@ -43,15 +49,27 @@ function App() {
 
       <div className="App">
         {/* this is the app document */}
-        <Header />
-        <Navbar />
-        {/* <Home /> */}
-        <Blog />
-        {/* <BlogList /> */}
-        {/* <ContactUs /> */}
-        {/* <AboutUs /> */}
-        {/* <SignIn /> */}
-        <Footer />
+        <BrowserRouter >
+          <ScrollToTop />
+          <Header />
+          {/* <Navbar /> */}
+
+          <Switch >
+            <Route path='/' exact component={Home} />
+            <Route path='/blog' exact component={Blog} />
+            <Route path='/blog-list' exact component={BlogList} />
+            <Route path='/contact-us' exact component={ContactUs} />
+            <Route path='/about-us' exact component={AboutUs} />
+            <Route path='/login' exact component={SignIn} />
+            <Route path='/HtmlPage' exact component={HtmlPage} />
+            <Route path='/CssPage' exact component={CssPage} />
+            <Route path='/JavascriptPage' exact component={JavascriptPage} />
+            <Route path='/ReactPage' exact component={ReactPage} />
+            <Route path='/VuePage' exact component={VuePage} />
+            
+          </Switch>
+          <Footer />
+        </BrowserRouter>
 
 
 

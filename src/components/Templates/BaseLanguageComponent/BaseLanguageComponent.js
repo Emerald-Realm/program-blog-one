@@ -1,16 +1,20 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 
 import BaseListCard from '@templates/BaseBlogListCard/BaseListCard'
-import blogsList from '@apis/blogsList'
 import { BaseButtonThree } from '@templates/BaseButton/BaseButton'
 
-function ReactComponent() {
+function BaseLanguageComponent(props) {
+
+  let { language, list } = props
+
   return (
-    <div className='react flex-col-end gap3' >
-        <p className='language-name h3'>REACT</p>
+    <>
+      <p className='language-name h3-bold'>{language}</p>
+    <div className='flex-col gap3' id={language} >
       <div className='blog-list-component gap3'>
         {
-          blogsList.map((item, index) => index  < 1 ? (
+          list.map((item, index) => index > 1 ? (
             <BaseListCard key={item.id}
               alt={item.alt} title={item.title} name={item.name}
               tagOne={item.tagOne} tagTwo={item.tagTwo}
@@ -20,9 +24,12 @@ function ReactComponent() {
           )
         }
       </div>
-        <BaseButtonThree buttonText = 'See all' />
+   <NavLink to={`/${language}Page`} exact >
+      <BaseButtonThree buttonText='See all' />
+    </NavLink>
     </div>
+    </>
   )
 }
 
-export default ReactComponent
+export default BaseLanguageComponent

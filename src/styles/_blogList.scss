@@ -1,3 +1,13 @@
+    .language-name {
+        text-align: center;
+        margin-bottom: 0.4rem;
+        color: var(--dark);
+    }
+
+    .language-page {
+        margin: 1vw 5vw;
+    }
+
 @media screen and (max-width: 799px) {
     .blog-list {
         width: 100vw;
@@ -6,14 +16,20 @@
 
 
 
-    .language-name:after{
-        display: block;
-        margin: 0.3em 0em;
-        height: 3px;
-        text-shadow: none;
-        content: '';
-        width: 50vw;
-        background-color: var(--grey);
-    } 
+    .blog-list-component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
     
+}
+
+@media screen and (min-width: 800px) {
+    .blog-list-component {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

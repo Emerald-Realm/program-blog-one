@@ -1,8 +1,38 @@
 .App {
-  --grey: #a5a5a5;
-  --white: #ffffff;
-  --black: #000000;
+  --grey: hsl(0, 0%, 75%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 35%);
+  --dark: hsl(0, 0%, 10%);
+  color: var(--black);
 }
+
+
+$pad1: 2.5rem;
+$pad2: 1.875rem;
+$pad3: 1.25rem;
+$pad4: 1rem;
+$pad5: 0.625rem;
+$pad6: 0.3125rem;
+
+$h5: 0.9rem;
+$h5b: bold;
+
+$blank: hsla(0, 0%, 100%, 0.2);
+
+$primary_color: hsl(32, 84%, 50%);
+$primary_color_light: hsl(32, 84%, 80%);
+$primary_color_dark: hsl(32, 84%, 30%);
+
+$secondary_color: hsl(171, 84%, 50%);
+$secondary_color_light: hsl(171, 84%, 80%);
+$secondary_color_dark: hsl(171, 84%, 30%);
+$link: #731b85;
+$html: #e666ff;
+$css: #50850d;
+$js: #4c3152;
+$header_color: linear-gradient(148.25deg,
+  rgba(230, 102, 255, 0.2) 0.82%,
+  rgba(230, 102, 255, 0.1) 100%);
 
 @font-face {
   font-family: OpenSans;
@@ -17,30 +47,107 @@
 .t-center {
   text-align: center;
 }
+.t-left {
+  text-align: left;
+}
+.t-right {
+  text-align: right;
+}
 
-.h1 {
+.dark {
+  color: var(--dark);
+}
+
+.h1-bold {
   @include fontStyle(3rem, 800);
 }
 
-.h2 {
-  @include fontStyle(2.5rem, 400);
+.h1-normal {
+  @include fontStyle(3rem, 550);
 }
 
-.h3 {
-  @include fontStyle(2rem, 500);
+.h1-thin {
+  @include fontStyle(3rem, 300);
 }
 
-.h4 {
-  @include fontStyle(1.5rem, 600);
+.h2-bold {
+  @include fontStyle(2.5rem, 800);
 }
 
-.h5 {
-  @include fontStyle(0.9rem, 700);
+.h2-normal {
+  @include fontStyle(2.5rem, 550);
 }
 
-.h6 {
+.h2-thin {
+  @include fontStyle(2.5rem, 300);
+}
+
+
+
+.h3-bold {
+  @include fontStyle(2rem, 800);
+}
+
+.h3-normal {
+  @include fontStyle(2rem, 550);
+}
+
+.h3-thin {
+  @include fontStyle(2rem, 300);
+}
+
+.h4-bold {
+  @include fontStyle(1.5rem, 800);
+}
+
+.h4-normal {
+  @include fontStyle(1.5rem, 550);
+}
+
+.h4-thin {
+  @include fontStyle(1.5rem, 300);
+}
+
+
+.h5-bold {
+  @include fontStyle(0.9rem, 800);
+}
+
+.h5-normal {
+  @include fontStyle(0.9rem, 550);
+}
+
+.h5-thin {
+  @include fontStyle(0.9rem, 300);
+}
+
+
+.h6-bold {
+  @include fontStyle(0.8rem, 800);
+}
+
+.h6-normal {
+  @include fontStyle(0.8rem, 550);
+}
+
+.h6-thin {
   @include fontStyle(0.8rem, 300);
 }
+
+.text-bold {
+  @include fontStyle(0.8rem, 800);
+}
+
+.text-normal {
+  @include fontStyle(0.8rem, 550);
+}
+
+.text-thin {
+  @include fontStyle(0.8rem, 300);
+}
+
+
+
 
 .gap1 {
   gap: 2.5rem;
@@ -64,6 +171,14 @@
 
 .gap6 {
   gap: 0.3125rem;
+}
+
+.gap7 {
+  gap: 0.15625rem;
+}
+
+.gap8 {
+  gap: 0.078125rem;
 }
 
 .flex-col {
@@ -95,27 +210,3 @@
   align-items: flex-end;
   flex-wrap: wrap;
 }
-
-$pad1: 2.5rem;
-$pad2: 1.875rem;
-$pad3: 1.25rem;
-$pad4: 1rem;
-$pad5: 0.625rem;
-$pad6: 0.3125rem;
-
-$h5: 0.9rem;
-$h5b: bold;
-
-$blank: hsla(0, 0%, 100%, 0.2);
-
-$primary_color: #eb8916;
-$secondary_color: #ecaa5d;
-$link: #731b85;
-$html: #e666ff;
-$css: #50850d;
-$js: #4c3152;
-$header_color: linear-gradient(
-  148.25deg,
-  rgba(230, 102, 255, 0.2) 0.82%,
-  rgba(230, 102, 255, 0.1) 100%
-);

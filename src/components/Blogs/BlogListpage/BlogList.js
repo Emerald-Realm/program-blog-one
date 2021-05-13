@@ -1,20 +1,16 @@
 import React from 'react'
-import CssComponent from './CssComponent'
-
-import HtmlComponent from './HtmlComponent'
-import ReactComponent from './ReactComponent'
-import VueComponent from './VueComponent'
-import JsComponent from './JsComponent'
-
+import blogsList from '@apis/blogsList'
+import BaseLanguageComponent from '../../Templates/BaseLanguageComponent/BaseLanguageComponent'
 
 function BlogList() {
   return (
     <div className='blog-list flex-col-center gap3'>
-      <HtmlComponent />
-      <CssComponent />
-      <JsComponent />
-      <ReactComponent />
-      <VueComponent />
+        <BaseLanguageComponent language='Html' list={blogsList} />
+        <BaseLanguageComponent language='Css' list={blogsList} />
+        <BaseLanguageComponent language='javascript' list={blogsList} />
+        <BaseLanguageComponent language='React' list={blogsList} />
+        <BaseLanguageComponent language='Vue' list={blogsList} />
+
     </div>
   )
 }

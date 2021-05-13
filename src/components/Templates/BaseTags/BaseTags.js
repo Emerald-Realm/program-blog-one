@@ -2,7 +2,7 @@ import React from 'react'
 
 export function BaseTag(props) {
     return (
-        <button className='base-tag h5'>
+        <button className='base-tag h6-normal'>
             {props.tag}
         </button>
     )

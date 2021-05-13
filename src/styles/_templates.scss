@@ -1,3 +1,6 @@
+// all base components styles
+
+
 .base-button-one {
   background-color: $primary_color;
   padding: 0.9em;
@@ -9,6 +12,7 @@
   align-items: center;
   justify-content: space-evenly;
   transition: 0.3s all ease-in;
+
   &:hover {
     background-color: white;
     border: solid 2px $primary_color;
@@ -22,11 +26,12 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: $blank;
-  border: solid 2px $secondary_color;
-  color: $secondary_color;
+  border: solid 2px $primary_color;
+  color: $primary_color;
   padding: 0.9em;
   border-radius: 0.3em;
   transition: 0.3s all ease-in;
+
   &:hover {
     border: solid 2px $link;
     color: $link;
@@ -44,6 +49,7 @@
   border-radius: 0.5em;
   transition: 0.3s all ease-in;
   text-decoration: underline solid 2px white;
+
   &:hover {
     text-decoration: underline solid 2px $link;
     color: $link;
@@ -53,13 +59,17 @@
 .base-tag {
   padding: 0.1rem 0.1rem 0.1rem 0.1rem;
   margin: 0.1em;
+  color: $secondary_color_dark;
   background-color: $blank;
+
+  &:hover {
+    color: $secondary_color;
+  }
 }
 
 .base-language-card {
   border: solid $blank 0.4rem;
-  border-top: solid $primary_color 0.2rem;
-  padding: $pad4;
+  padding: $pad3;
   border-radius: 0.8rem;
 
   img {
@@ -71,7 +81,7 @@
   }
 
   &:hover {
-    box-shadow: 1px 2px 0.5rem $secondary_color;
+    box-shadow: 1px 2px 0.2rem $secondary_color;
   }
 }
 
@@ -80,9 +90,21 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  width: clamp(10rem, 50vw, 20rem);
+  width: 15em;
+  padding: 0.5rem;
+  margin: 0 0 1rem 0rem;
+
+  &:hover {
+    box-shadow: 1px 2px 0.29rem $secondary_color_dark;
+    transition: 0.18s all ease-in;
+  }
+
   img {
     width: 100%;
+  }
+
+  .post-title {
+    color: var(--dark);
   }
 
   .post-text {
@@ -90,11 +112,9 @@
     word-wrap: break-word;
     max-height: clamp(1.5rem, 6vh, 4rem);
     line-height: 1rem;
-    // padding: 0.02rem 0vw;
-    border : solid 2px var(--grey);
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
 }
@@ -127,6 +147,11 @@
   grid-template-columns: 1fr 1fr;
   text-align: left;
 
+  &:hover {
+    transition: 0.15s all ease;
+    box-shadow: 1px 2px 0.2rem $secondary_color;
+  }
+
   img {
     border-radius: 0.5em;
     width: 100%;
@@ -138,10 +163,62 @@
 }
 
 .base-blog {
-  width: 100vw;
   margin: 5vw;
+  // overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    margin: 1vh 0vw;
+    // filter: brightness(2);
+    // filter: contrast(5);
+    // filter: drop-shadow(50);
+    // filter: grayscale(5);
+    filter: hue-rotate(10deg);
+    // filter: invert(1);
+    // filter: sepia(1);
+  }
 
   .blog-container {
-    
+    width: 100%;
+
+    .blogger {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        border-radius: 20%;
+        width: 10vw;
+        min-width: 3rem;
+        max-width: 6rem;
+      }
+    }
+
+    .blog-date {
+      margin: 1vh 0;
+    }
+  }
+
+  .blog-actions {
+    .blog-clicks {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5em;
+
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 799px) {
+  .base-language-card {
+    border-left: 1px solid $secondary_color;
+    transition: 1s all ease-in;
   }
 }

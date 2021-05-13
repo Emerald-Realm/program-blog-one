@@ -1,0 +1,194 @@
+.App {
+  --grey: hsl(0, 0%, 75%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 35%);
+  --dark: hsl(0, 0%, 10%);
+  color: var(--black);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("");
+}
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.h1-bold {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.h1-normal {
+  font-size: 3rem;
+  font-weight: 550;
+}
+
+.h1-thin {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.h2-bold {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.h2-normal {
+  font-size: 2.5rem;
+  font-weight: 550;
+}
+
+.h2-thin {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.h3-bold {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.h3-normal {
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.h3-thin {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.h4-bold {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.h4-normal {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+.h4-thin {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.h5-bold {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.h5-normal {
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.h5-thin {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.h6-bold {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.h6-normal {
+  font-size: 0.8rem;
+  font-weight: 550;
+}
+
+.h6-thin {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.text-bold {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.text-normal {
+  font-size: 0.8rem;
+  font-weight: 550;
+}
+
+.text-thin {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.gap1 {
+  gap: 2.5rem;
+}
+
+.gap2 {
+  gap: 1.875rem;
+}
+
+.gap3 {
+  gap: 1.25rem;
+}
+
+.gap4 {
+  gap: 1rem;
+}
+
+.gap5 {
+  gap: 0.625rem;
+}
+
+.gap6 {
+  gap: 0.3125rem;
+}
+
+.gap7 {
+  gap: 0.15625rem;
+}
+
+.gap8 {
+  gap: 0.078125rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex-col-end {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}

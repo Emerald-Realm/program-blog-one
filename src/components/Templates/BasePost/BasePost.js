@@ -5,9 +5,9 @@ import { BaseThreeTags } from '../BaseTags/BaseTags'
 
 function BasePost(props) {
     return (
-        <div className='base-post gap6'>
+        <div className='base-post gap8'>
             <img src={props.image} alt={props.alt} />
-            <p className='post-title h4'>{props.title}</p>
+            <p className='post-title h5-normal'>{props.title}</p>
             <BaseThreeTags
                 tagOne={props.tagOne}
                 tagTwo={props.tagTwo}

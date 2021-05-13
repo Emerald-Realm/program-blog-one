@@ -11,13 +11,13 @@ function ShowCase() {
         <div className='tags'>
           <BaseThreeTags tagOne='tag one' tagTwo='tag two' tagThree='tag three' />
         </div>
-        <div className='blog-title h4'>Why Being Naive Can Make Your Fortune</div>
+        <div className='blog-title h4-normal'>Why Being Naive Can Make Your Fortune</div>
         <div className='blog-info'>
           <div className='blog-writer'>
             <p>image</p>
-            <p className='blog-writer-name h6'>John Doe</p>
+            <p className='blog-writer-name h6-light'>John Doe</p>
           </div>
-          <BaseButtonOne buttonText='Read More' />
+            <BaseButtonOne buttonText='Read More' />
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import Philosophy from './Philosophy'
 import HomePopular from './HomePopular'
 import Aim from './Aim'
 import Recent from './Recent'
-import Contact from './Contact'
+import Contact from './ContactComponent'
 import Testimony from './Testimony'
 import Email from './Email'
 

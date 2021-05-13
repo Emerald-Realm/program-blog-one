@@ -7,8 +7,8 @@ import { BaseButtonThree } from '@templates/BaseButton/BaseButton'
 function CssComponent() {
   return (
     <div className='css flex-col-end gap3' >
-      <div className='blog-list-component flex-col-center gap3'>
         <p className='language-name h3'>CSS</p>
+      <div className='blog-list-component gap3'>
         {
           blogsList.map((item, index) => index < 1 ? (
             <BaseListCard key={item.id}

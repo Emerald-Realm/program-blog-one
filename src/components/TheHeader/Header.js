@@ -18,7 +18,7 @@ function Header() {
           {globalContext.globalState.menuStatus ? "Close" : "Menu"}
         </button>
       </div>
-      {/* <Navbar /> */}
+      <Navbar />
 
 
     </div>
