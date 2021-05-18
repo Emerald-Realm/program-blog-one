@@ -34,10 +34,6 @@ $header_color: linear-gradient(148.25deg,
   rgba(230, 102, 255, 0.2) 0.82%,
   rgba(230, 102, 255, 0.1) 100%);
 
-@font-face {
-  font-family: OpenSans;
-  src: url("");
-}
 
 @mixin fontStyle($size, $weight) {
   font-size: $size;

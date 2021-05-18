@@ -14,9 +14,9 @@ function BlogContainer(props) {
         <div className="blog-date">{props.date}</div>
       </div>
       <div className="blog-article">
-        <img src={props.mainImage} alt={`${props.title} main image`} />
+        <img src={props.mainImage} alt={`${props.title} main rep`} />
         <div className="blog-part-one">{props.blogPartOne}</div>
-        <img src={props.secImage} alt={`${props.title} secondary image`} F />
+        <img src={props.secImage} alt={`${props.title} secondary rep`} F />
         <div className="blog-part-two">{props.blogPartTwo}</div>
       </div>
     </div>

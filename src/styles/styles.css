@@ -17,11 +17,6 @@
   color: var(--black);
 }
 
-@font-face {
-  font-family: OpenSans;
-  src: url("");
-}
-
 .t-center {
   text-align: center;
 }
